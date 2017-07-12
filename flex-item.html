@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex做列表元素</title>
+  <style>
+       * {
+         margin: 0;
+         padding: 0;
+
+       }
+       html,body {
+         height: 100%;
+       }
+       .page {
+         height: 100%;
+       }
+       ul,li {
+         list-style: none;
+
+       }
+       a {
+         text-decoration: none;
+         outline: none;
+         color:gray;
+       }
+       .flex-title {
+         display: -webkit-box;
+         display: -webkit-flex;
+         display: flex;
+         background: black;
+         align-items: center;
+
+       }
+       .flex-title-tip {
+         flex: 1;
+       }
+       p.one {
+           text-align: center;
+           font-size: 25px;
+           font-family: sans-serif;
+
+           color: #fff;
+       }
+      .flex-search {
+        margin: 5px 3px;
+        border: 1px solid red;
+        display: flex;
+        justify-content: center;
+        background: #ccc;
+
+
+      }
+      .search-text-tip {
+        text-align: center;
+      }
+       .flex-cont {
+         display: -webkit-box;
+         display: -webkit-flex;
+         display: flex;
+         /*纵轴对齐*/
+         align-items: center;
+
+       }
+       .flex-line {
+         width: 100%;
+         height: 1px;
+         background-color: #c0c0c0;
+       }
+       .flex-item {
+         flex:1;
+         /*手机宽度有限，最主要的元素，加比例*/
+         /*background: red;*/
+
+       }
+       .s-tit {
+         /*高度等于行高，垂直居中*/
+         /*background: green;
+         line-height: 36px;
+         height: 36px;*/
+         font-size: 36px;
+         height: 36px;
+
+       }
+       .s-tit .s-desc {
+         line-height: 1.2;
+       }
+       .s-img {
+        margin-right: 5px;
+        /*占该占的*/
+        width: 50px;
+        height: 50px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        background: #31BBEE;
+      }
+      .f-icon {
+        display: block;
+        width: 20px;
+        height: 20px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        background-color: #31BBEE;
+
+      }
+
+
+
+      .btn-box {
+        display: flex;
+        justify-content: space-around;
+      }
+      .s-word {
+        height: auto;
+
+        width: 100%;
+        /*出现滚动条*/
+        overflow: scroll;
+
+        -webkit-overflow-scrolling:touch;
+      }
+
+  </style>
+</head>
+<body>
+<div class="page">
+  <ul>
+    <li>
+      <div class="flex-title">
+          <div class="flex-title-tip">
+            <p class="one">微信</p>
+          </div>
+            <i class="f-icon-two"></i>
+      </div>
+        <!-- 移动端特点？屏幕小，交互全靠手
+        列表 45px+
+        宽度：不能放太多内容
+        375px iphone 7s
+        414px iphone 7s plus -->
+     </li>
+  </ul>
+  <ul>
+     <li>
+       <div class="flex-search flex-search-icon">
+          <i class="f-icon" ></i>
+          <div class="search-text">
+              <p class="search-text-tip"><a href="flex-search.html">搜索</a></p>
+          </div>
+
+       </div>
+     </li>
+   </ul>
+  <ul>
+    <li>
+      <div class="flex-cont flex-simple">
+        <div class="s-img"></div>
+        <div class="flex-item s-word">
+          <p class="s-tit">title</p>
+          <p class="s-desc">description</p>
+        </div>
+        <i class="f-icon"></i>
+      </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+         <div class="flex-line">
+
+         </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <div class="flex-cont flex-simple">
+        <div class="s-img"></div>
+        <div class="flex-item s-word">
+          <p class="s-tit">title</p>
+          <p class="s-desc">description</p>
+        </div>
+        <i class="f-icon"></i>
+      </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+         <div class="flex-line">
+
+         </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <div class="flex-cont flex-simple">
+        <div class="s-img"></div>
+        <div class="flex-item s-word">
+          <p class="s-tit">title</p>
+          <p class="s-desc">description</p>
+        </div>
+        <i class="f-icon"></i>
+      </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+         <div class="flex-line">
+
+         </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <div class="flex-cont flex-simple">
+        <div class="s-img"></div>
+        <div class="flex-item s-word">
+          <p class="s-tit">title</p>
+          <p class="s-desc">description</p>
+        </div>
+        <i class="f-icon"></i>
+      </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+         <div class="flex-line">
+
+         </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <div class="flex-cont flex-simple">
+        <div class="s-img"></div>
+        <div class="flex-item s-word">
+          <p class="s-tit">title</p>
+          <p class="s-desc">description</p>
+        </div>
+        <i class="f-icon"></i>
+      </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+         <div class="flex-line">
+
+         </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <div class="flex-cont flex-simple">
+        <div class="s-img"></div>
+        <div class="flex-item s-word">
+          <p class="s-tit">title</p>
+          <p class="s-desc">description</p>
+        </div>
+        <i class="f-icon"></i>
+      </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+         <div class="flex-line">
+
+         </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <div class="flex-cont flex-simple">
+        <div class="s-img"></div>
+        <div class="flex-item s-word">
+          <p class="s-tit">title</p>
+          <p class="s-desc">description</p>
+        </div>
+        <i class="f-icon"></i>
+      </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+         <div class="flex-line">
+
+         </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <div class="flex-cont flex-simple">
+        <div class="s-img"></div>
+        <div class="flex-item s-word">
+          <p class="s-tit">title</p>
+          <p class="s-desc">description</p>
+        </div>
+        <i class="f-icon"></i>
+      </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <div class="flex-cont flex-simple">
+        <div class="s-img"></div>
+        <div class="flex-item s-word">
+          <p class="s-tit">title</p>
+          <p class="s-desc">description</p>
+        </div>
+        <i class="f-icon"></i>
+      </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+         <div class="flex-line">
+
+         </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <div class="flex-cont flex-simple">
+        <div class="s-img"></div>
+        <div class="flex-item s-word">
+          <p class="s-tit">title</p>
+          <p class="s-desc">description</p>
+        </div>
+        <i class="f-icon"></i>
+      </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+         <div class="flex-line">
+
+         </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <div class="flex-cont flex-simple">
+        <div class="s-img"></div>
+        <div class="flex-item s-word">
+          <p class="s-tit">title</p>
+          <p class="s-desc">description</p>
+        </div>
+        <i class="f-icon"></i>
+      </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <div class="flex-cont flex-simple">
+        <div class="s-img"></div>
+        <div class="flex-item s-word">
+          <p class="s-tit">title</p>
+          <p class="s-desc">description</p>
+        </div>
+        <i class="f-icon"></i>
+      </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+         <div class="flex-line">
+
+         </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <div class="flex-cont flex-simple">
+        <div class="s-img"></div>
+        <div class="flex-item s-word">
+          <p class="s-tit">title</p>
+          <p class="s-desc">description</p>
+        </div>
+        <i class="f-icon"></i>
+      </div>
+    </li>
+  </ul>
+  <div class="btn-box">
+      <i class="f-icon"></i>
+      <i class="f-icon"></i>
+      <i class="f-icon"></i>
+      <i class="f-icon"></i>
+    <!-- <button class="f-btn">btn</button> -->
+  </div>
+
+</div>
+
+</body>
+</html>
